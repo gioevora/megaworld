@@ -1003,13 +1003,7 @@ button:hover {
 	margin-top: 8%;
 }
 
-.personal-info {
-	background-color: #ffffff;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	margin: 8px;
-	padding: 24px;
-	border-radius: 16px;
-}
+
 
 .personal-title {
 	font-weight: 600;
@@ -1205,6 +1199,128 @@ input.invalid {
 	transition: transform .3s ease-in-out .1s;
 	transform: translate(0);
 }
+
+/* --------------------------
+Submit Property Section
+-----------------------------*/
+
+/* .personal-info {
+	background-color: #ffffff;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	margin: 8px;
+	padding: 24px;
+	border-radius: 16px;
+} */
+
+
+.submit-property{
+	background-color: #f9f9f9;
+	padding: 0;
+	margin: 0;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.submit-property .img-submit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	border-top-left-radius: 8px;	
+	border-bottom-left-radius: 8px;
+	
+}
+
+.personal-info{
+	margin-top: 24px ;
+}
+
+.upload__box {
+	padding: 40px;
+  }
+  
+  .upload__inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+
+	z-index: -1;
+  }
+  
+  .upload__btn {
+	display: inline-block;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+	min-width: 100%;
+	padding: 5px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	border: 2px solid #4045ba;
+	border-style: dashed;
+	background-color: transparent;
+	border-color: #4045ba;
+	border-radius: 10px;
+	line-height: 26px;
+	font-size: 14px;
+  }
+  
+  .upload__btn:hover {
+	background-color: unset;
+	color: #4045ba;
+	transition: all 0.3s ease;
+  }
+  
+  .upload__btn-box {
+	margin-bottom: 10px;
+  }
+  
+  .upload__img-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+  }
+  
+  .upload__img-box {
+	width: 100px;
+	padding: 0 10px;
+	margin-bottom: 12px;
+  }
+  
+  .upload__img-close {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	text-align: center;
+	line-height: 24px;
+	z-index: 1;
+	cursor: pointer;
+  }
+  
+  .upload__img-close:after {
+	content: '\2716';
+	font-size: 14px;
+	color: white;
+  }
+  
+  .img-bg {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	padding-bottom: 100%;
+  }
+
+  
+  
+
+  
+
+
+
+
 
 /*---------------------
   Room Section
@@ -2379,6 +2495,20 @@ input.invalid {
 
 	.hp-room-item {
 		margin-bottom: 10px;
+	}
+
+	.submitproperty-section {
+		margin: 8px 0px 8px 0px;
+		padding: 0;
+	}
+	.personal-info{
+		margin: 0;
+		padding: 8;
+	}
+
+	.upload__box{
+		padding: 0;
+		margin: 0;
 	}
 }
 

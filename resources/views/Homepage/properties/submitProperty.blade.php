@@ -1,26 +1,19 @@
 @include('Homepage.layout.header')
 <!-- Header End -->
 
-<style>
-    @media (max-width: 768px) {
-        .submitproperty-section {
-            margin: 8px 0px 8px 0px;
-            padding: 0;
-        }
-        .personal-info{
-            margin: 0;
-            padding: 8;
-        }
-    }
-</style>
+
 
 
 
 <!-- Rooms Section Begin -->
 <section class="submitproperty-section">
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
+        <div class="row submit-property">
+            <div class="col-lg-6 p-0">
+                <img class="img-submit" src="../img/submit-property-hand-shake.jpg" alt="">
+            </div>
+
+            <div class="col-lg-6 col-md-10 pt-4">
                 <div class="personal-info">
                     <form action="/Admin/Add/for_lease_properties" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -144,17 +137,32 @@
                                         <textarea id="description" name="description" class="form-control" rows="5" placeholder="Add something about the property..." required></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 ">
-                                    <div class="form-group" style="display: flex; flex-direction: column; align-items: center;">
-                                        <label for="image">Property Image</label>
-                                        <input type="file" id="image" name="image[]" accept="image/*" class="form-control" onchange="previewImage(event)" required multiple>
-                                        <div style="display: flex; justify-content: center; align-items: center; max-width: 100%; max-height: 200px; margin-top: 10px;">
-                                            <img id="imagePreview" src="" alt="Preview" style="max-width: 100%; max-height: 200px; display: none;">
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="hidden" name="status" value="Pending">
+
                             </div>
+                        </div>
+
+                        <div class="tab">
+                            <div class="col-sm-4 col-md-12">
+                                <div class="upload__box">
+                                    <div class="upload__btn-box">
+                                        <label class="upload__btn">
+                                            <p>Upload images</p>
+                                            <input type="file" multiple="" name="image[]" accept="image/*" data-max_length="20" class="upload__inputfile">
+                                            <i class='bx bx-image-add bx-lg'></i>
+                                            <header>
+                                                <h4>Select File here</h4>
+                                            </header>
+                                            <p class="supported">Files Supported: image, png, jpg, jpeg</p>
+                                            <img id="previewImage" src="#" alt="Preview" style="display:none; max-width: 100%; max-height: 200px;">
+
+                                        </label>
+                                    </div>
+                                    <div class="upload__img-wrap"></div>
+                                </div>
+
+                            </div>
+
+                            <input type="hidden" name="status" value="Pending">
                         </div>
 
                         <div style="overflow:auto;">
@@ -166,7 +174,8 @@
                         </div>
 
                         <!-- Circles which indicates the steps of the form: -->
-                        <div style="text-align:center;margin-top:40px;">
+                        <div class="mb-4" style="text-align:center;margin-top:20px;">
+                            <span class="step"></span>
                             <span class="step"></span>
                             <span class="step"></span>
                             <span class="step"></span>
@@ -197,7 +206,7 @@
         if (n == (x.length - 1)) {
             document.getElementById("nextBtn").style.display = "none";
             document.getElementById("submitBtn").style.display = "inline";
-            
+
         } else {
             document.getElementById("nextBtn").innerHTML = "Next";
         }
@@ -289,6 +298,8 @@
 
 
 @include('Homepage.layout.end')
+
+
 
 </body>
 

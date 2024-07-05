@@ -97,3 +97,5 @@
 <script src="{{asset('/asset/css/user/js/jquery.slicknav.js')}}"></script>
 <script src="{{asset('/asset/css/user/js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('/asset/css/user/js/main.js')}}"></script>
+
+<script src="{{asset('/asset/js/previewImage.js')}}"></script>
