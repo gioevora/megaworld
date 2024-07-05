@@ -1,89 +1,103 @@
 @include('Homepage.layout.header')
 <!-- Header End -->
 
+<style>
+    @media(max-width: 768px){
+        .loan-section{
+            margin:0;
+            padding:0;
+        }
+    }
+</style>
+
 
 
 <!-- Rooms Section Begin -->
 <section class="loan-section">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="loan-amount">Loan Amount</label>
+                        <input type="text" id="loan-amount" class="form-control" placeholder="100,000.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest-rate">Select Interest</label>
+                        <select id="interest-rate" class="form-control">
+                            <option value="">0%</option>
+                            <option value="0.06">6%</option>
+                            <option value="0.07">7%</option>
+                            <option value="0.08">8%</option>
+                            <option value="0.09">9%</option>
+                            <option value="0.10">10%</option>
+                            <option value="0.11">11%</option>
+                            <option value="0.12">12%</option>
+                            <option value="0.13">13%</option>
+                            <option value="0.14">14%</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" value="Calculate" class="btn btn-block form-control" onclick="calculateResults()" />
+                    </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="loan-amount">Loan Amount</label>
-                <input type="text" id="loan-amount" class="form-control" placeholder="100,000.00">
+                </div>
+                
+               
+                    <div class="col-md-7">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Years</th>
+                                        <th>Monthly Payment</th>
+                                        <th>Total Payment</th>
+                                        <th>Total Interest</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 year</td>
+                                        <td id="monthly-payment-1"></td>
+                                        <td id="total-payment-1"></td>
+                                        <td id="total-interest-1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 years</td>
+                                        <td id="monthly-payment-2"></td>
+                                        <td id="total-payment-2"></td>
+                                        <td id="total-interest-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 years</td>
+                                        <td id="monthly-payment-3"></td>
+                                        <td id="total-payment-3"></td>
+                                        <td id="total-interest-3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 years</td>
+                                        <td id="monthly-payment-4"></td>
+                                        <td id="total-payment-4"></td>
+                                        <td id="total-interest-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 years</td>
+                                        <td id="monthly-payment-5"></td>
+                                        <td id="total-payment-5"></td>
+                                        <td id="total-interest-5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <small class="text-gray-100"><b> DISCLAIMER: </b>Please note that computation is based on diminishing balance. Indicative interest rate is still subject to company approval based on prevailing market rate.</small>
+                    </div>
+               
             </div>
-            <div class="form-group">
-                <label for="interest-rate">Select Interest</label>
-                <select id="interest-rate" class="form-control">
-                    <option value="">0%</option>
-                    <option value="0.06">6%</option>
-                    <option value="0.07">7%</option>
-                    <option value="0.08">8%</option>
-                    <option value="0.09">9%</option>
-                    <option value="0.10">10%</option>
-                    <option value="0.11">11%</option>
-                    <option value="0.12">12%</option>
-                    <option value="0.13">13%</option>
-                    <option value="0.14">14%</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="button" value="Calculate" class="btn btn-block form-control" onclick="calculateResults()" />
-            </div>
-
         </div>
 
-        <div class="col-md-7">
-            <div style="overflow-x:auto">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Years</th>
-                            <th>Monthly Payment</th>
-                            <th>Total Payment</th>
-                            <th>Total Interest</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1 year</td>
-                            <td id="monthly-payment-1"></td>
-                            <td id="total-payment-1"></td>
-                            <td id="total-interest-1"></td>
-                        </tr>
-                        <tr>
-                            <td>2 years</td>
-                            <td id="monthly-payment-2"></td>
-                            <td id="total-payment-2"></td>
-                            <td id="total-interest-2"></td>
-                        </tr>
-                        <tr>
-                            <td>3 years</td>
-                            <td id="monthly-payment-3"></td>
-                            <td id="total-payment-3"></td>
-                            <td id="total-interest-3"></td>
-                        </tr>
-                        <tr>
-                            <td>4 years</td>
-                            <td id="monthly-payment-4"></td>
-                            <td id="total-payment-4"></td>
-                            <td id="total-interest-4"></td>
-                        </tr>
-                        <tr>
-                            <td>5 years</td>
-                            <td id="monthly-payment-5"></td>
-                            <td id="total-payment-5"></td>
-                            <td id="total-interest-5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-            <small class="text-gray-100"><b> DISCLAIMER: </b>Please note that computation is based on diminishing balance. Indicative interest rate is still subject to company approval based on prevailing market rate.</small>
 
-        </div>
     </div>
-
 </section>
 
 

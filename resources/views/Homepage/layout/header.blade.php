@@ -2,9 +2,16 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Sona Template">
-    <meta name="keywords" content="Sona, unica, creative, html">
+    
+    <meta name="title" content="Megaworld">
+    <meta name="description" content="Discover the latest updates and news about Megaworld, a leading real estate developer in the Philippines. Find out more about their projects and developments here.">
+    <meta name="keywords" content="Real state, For Sale, For Lease">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Megaworld Corporation</title>

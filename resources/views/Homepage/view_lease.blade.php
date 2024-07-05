@@ -200,7 +200,7 @@
     
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
                 <div class="row">
@@ -242,9 +242,8 @@
                                             <input type="email" name="email" class="form-control" placeholder="juandelacruz@gmail.com">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
+                                    
+                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="date">Pick a Date</label>
                                             <input type="date" name="date" class="form-control">
@@ -257,12 +256,13 @@
                                         </div>
                                     </div>
                                 </div>
+                              
                                 <div class="form-group">
                                     <label for="message">Message</label>
                                     <textarea name="message" id="message" cols="30" rows="4" class="form-control" placeholder="Tell us something..."></textarea>
                                 </div>
                                 
-                                <button type="submit" class="d-flex align-items-center justify-content-center mb-4 m-2 w-100">
+                                <button type="submit" class="d-flex align-items-center justify-content-center mb-4 m-2 w-100" style="margin-bottom: 16px;" >
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                                             <path fill="none" d="M0 0h24v24H0z"></path>
@@ -271,6 +271,8 @@
                                         Submit Schedule
                                     </span>
                                 </button>
+                                
+                                <small style="margin-bottom: 8px">Notes: Upon submitting your personal information, please note that we prioritize your privacy and security. We use this information solely for the purpose stated and do not share it with third parties without your explicit consent. For more details, please refer to our privacy policy.</small>
                             </form>
 
 

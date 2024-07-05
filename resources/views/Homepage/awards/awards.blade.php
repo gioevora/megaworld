@@ -1,15 +1,42 @@
 @include('Homepage.layout.header')
+<style>
+    /* CSS for the responsive text and description */
+    .title-header p {
+        font-size: 3rem; /* Base font size for larger screens */
+        font-weight: bold; /* Ensure font weight is specified */
+        line-height: 1.5; /* Adjust line height for better readability */
+        margin-bottom: 20px; /* Add margin below the paragraph */
+    }
 
+    .title-header .desc {
+        font-size: 1rem; /* Font size for the description */
+        font-weight: semi-bold;
+    }
+
+    @media (max-width: 768px) {
+        /* Media query for smaller screens */
+        .title-header p {
+            font-size: 0.9rem;
+           margin: 0;
+           padding: 0;
+        }
+
+        .title-header .desc {
+            font-size: 0.5rem; 
+             margin: 0;
+           padding: 0;
+        }
+    }
+</style>
     
 
-  <div class="video-container" style="position: relative;">
-    <img src="{{asset('img/awards-landing.jpg')}}" alt="Background Image" style="background-size: cover; width: 100%;">
-    <div class="title-header" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white;">
-        <p style="font-size: 60px; font-weight:bold;">A Multi-awarded <br>Real Estate Developer</p>
-        <div class="desc" style="font-size:1rem;">Megaworld continues to cement its status today as the Philippines’ best developer <br>and an undisputed industry leader with dozens of recognitions from various local and <br>international award-giving organizations.</div>
+ <div class="video-container" style="position: relative;">
+    <img src="{{ asset('img/awards-landing.jpg') }}" alt="Background Image" style="background-size: cover; width: 100%;">
+    <div class="title-header" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+        <p>A Multi-awarded Real Estate Developer</p>
+        <div class="desc">Megaworld continues to cement its status today as the Philippines’ best developer and an undisputed industry leader with dozens of recognitions from various local and international award-giving organizations.</div>
     </div>
 </div>
-
 
     <main role="main" style="min-height: 656px;">
 
@@ -37,7 +64,6 @@
                         @endforeach
                         
                     </div>
-
                 </div>
             </div>
             <div class="awards-landing">

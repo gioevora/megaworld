@@ -1,13 +1,26 @@
 @include('Homepage.layout.header')
 <!-- Header End -->
 
+<style>
+    @media (max-width: 768px) {
+        .submitproperty-section {
+            margin: 8px 0px 8px 0px;
+            padding: 0;
+        }
+        .personal-info{
+            margin: 0;
+            padding: 8;
+        }
+    }
+</style>
+
 
 
 <!-- Rooms Section Begin -->
 <section class="submitproperty-section">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-8">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
                 <div class="personal-info">
                     <form action="/Admin/Add/for_lease_properties" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -17,42 +30,41 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">First Name</label>
-                                        <input type="text" oninput="this.className = ''" placeholder="Juan">
+                                        <label for="first_name">First Name</label>
+                                        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Juan" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Last Name</label>
-                                        <input type="text" oninput="this.className = ''" placeholder="Dela Cruz">
+                                        <label for="last_name">Last Name</label>
+                                        <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Dela Cruz" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Mobile Number</label>
-                                        <input type="text" oninput="this.className = ''" placeholder="+63 992 440 1097">
+                                        <label for="mobile_number">Mobile Number</label>
+                                        <input type="text" id="mobile_number" name="mobile_number" class="form-control" placeholder="+63 992 440 1097" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Email</label>
-                                        <input type="email" oninput="this.className = ''" placeholder="juan.delacruz@gmail.com">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="juan.delacruz@gmail.com" required>
                                     </div>
                                 </div>
-                                <div class="col-md-12 ">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="">Address</label>
-                                        <input type="text" oninput="this.className = ''" placeholder="Makati City, Manila Philippines">
+                                        <label for="address">Address</label>
+                                        <input type="text" id="address" name="address" class="form-control" placeholder="Makati City, Manila Philippines" required>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
                         <div class="tab">
-                            <h4 class="personal-title">Personal Information</h4>
+                            <h4 class="personal-title">Upload Image</h4>
                             <hr>
-                            <div class="col-md-12 ">
+                            <div class="col-md-12">
                                 <div class="container container-file">
                                     <div class="drop_box">
                                         <input type="file" accept="image/png, image/gif, image/jpeg" id="fileID" style="display:none;">
@@ -65,26 +77,24 @@
                                             <img id="previewImage" src="#" alt="Preview" style="display:none; max-width: 100%; max-height: 200px;">
                                         </label>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
 
                         <div class="tab">
-                            <h4 class="personal-title">Properties Information</h4>
+                            <h4 class="personal-title">Property Information</h4>
                             <hr>
-                            <div class="row px-4">
-                                <div class="col-md-6 mb-4">
+                            <div class="row">
+                                <div class="col-md-6 ">
                                     <div class="form-group">
-                                        <label for="">Properties Name</label>
-                                        <input type="text" name="lease_name" oninput="this.className = ''" placeholder="Megaworld Hotel...">
+                                        <label for="lease_name">Property Name</label>
+                                        <input type="text" id="lease_name" name="lease_name" class="form-control" placeholder="Megaworld Hotel..." required>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 ">
                                     <div class="form-group">
-                                        <label for="">Division</label>
-                                        <select name="division" id="" oninput="this.className = ''">
+                                        <label for="division">Division</label>
+                                        <select id="division" name="division" class="form-control" required>
                                             <option value="">Select Division</option>
                                             <option value="Metro Manila">Metro Manila</option>
                                             <option value="Luzon">Luzon</option>
@@ -93,36 +103,34 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 ">
                                     <div class="form-group">
-                                        <label for="">Location</label>
-                                        <input type="text" name="location" placeholder="Makati City..." oninput="this.className = ''">
+                                        <label for="location">Location</label>
+                                        <input type="text" id="location" name="location" class="form-control" placeholder="Makati City..." required>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 ">
                                     <div class="form-group">
-                                        <label for="">Category</label>
-                                        <select name="type" id="" oninput="this.className = ''">
+                                        <label for="type">Category</label>
+                                        <select id="type" name="type" class="form-control" required>
                                             <option value="">Select Category</option>
                                             <option value="Residentials">Residentials</option>
                                             <option value="Commercials">Commercials</option>
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 ">
                                     <div class="form-group">
-                                        <label for="">Unit Price</label>
-                                        <input type="text" name="unit_price" placeholder="00.00" oninput="this.className = ''">
-
+                                        <label for="unit_price">Unit Price</label>
+                                        <input type="text" id="unit_price" name="unit_price" class="form-control" placeholder="00.00" required>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 ">
                                     <div class="form-group">
-                                        <label for="">Unit Type</label>
-                                        <select name="unit_type" id="">
+                                        <label for="unit_type">Unit Type</label>
+                                        <select id="unit_type" name="unit_type" class="form-control" required>
                                             <option value="">Select Bed Room</option>
-                                            <option value="N/A"> N/A</option>
+                                            <option value="N/A">N/A</option>
                                             <option value="1BR">1 Bed Room</option>
                                             <option value="2BR">2 Bed Room</option>
                                             <option value="3BR">3 Bed Room</option>
@@ -130,31 +138,24 @@
                                         </select>
                                     </div>
                                 </div>
-
-
-                                <div class="col-md-12 mb-4">
+                                <div class="col-md-12 ">
                                     <div class="form-group">
-                                        <label for="">Description</label>
-                                        <textarea name="description" id="" cols="30" rows="5" placeholder="add something about the properties.." oninput="this.className = ''"></textarea>
+                                        <label for="description">Description</label>
+                                        <textarea id="description" name="description" class="form-control" rows="5" placeholder="Add something about the property..." required></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 mb-4">
+                                <div class="col-md-12 ">
                                     <div class="form-group" style="display: flex; flex-direction: column; align-items: center;">
-                                        <label for="image">Properties Image</label>
-                                        <input type="file" id="image" name="image[]" accept="image/*" onchange="previewImage(event)" class="form-control" oninput="this.className = ''" multiple>
+                                        <label for="image">Property Image</label>
+                                        <input type="file" id="image" name="image[]" accept="image/*" class="form-control" onchange="previewImage(event)" required multiple>
                                         <div style="display: flex; justify-content: center; align-items: center; max-width: 100%; max-height: 200px; margin-top: 10px;">
                                             <img id="imagePreview" src="" alt="Preview" style="max-width: 100%; max-height: 200px; display: none;">
                                         </div>
                                     </div>
-
                                 </div>
                                 <input type="hidden" name="status" value="Pending">
-
                             </div>
-
                         </div>
-
-
 
                         <div style="overflow:auto;">
                             <div style="float:right;">
@@ -163,26 +164,17 @@
                                 <button type="submit" id="submitBtn">Submit</button>
                             </div>
                         </div>
+
                         <!-- Circles which indicates the steps of the form: -->
                         <div style="text-align:center;margin-top:40px;">
                             <span class="step"></span>
                             <span class="step"></span>
                             <span class="step"></span>
                         </div>
-
-
                     </form>
-
                 </div>
-
-
             </div>
-
         </div>
-
-
-
-
     </div>
 </section>
 
